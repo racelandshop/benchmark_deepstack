@@ -41,9 +41,51 @@ Performance:
 
 | Metrics/Treshold         	| 0    	| 0.8     	|
 |--------------------------	|------	|---------	|
-| Accuracy                 	| 0.33 	| 0.66    	|
-| Precision                	| 0.65 	| 0.79    	|
-| Recall                   	| 0.33 	| 0.66    	|
-| F1-Score                 	| 0.41 	| 0.70    	|
-| Number of photos removed 	| N.A  	| 399/505 	|
+| Accuracy                 	| 0.33 	| 0.67    	|
+| Precision                	| 0.63 	| 0.74    	|
+| Recall                   	| 0.33 	| 0.67    	|
+| F1-Score                 	| 0.40 	| 0.69    	|
+| Number of photos removed 	| N.A  	| 415 / 508	|
 
+
+
+### Training using Five photos
+
+Use only one photo per person: 
+
+![Histogram of confidence](report_figures/01.2_Family_benchmark_histogram_knownPhotos.png)
+
+Histograms of confidance shows higher scores when the face is predicted correctly (blue)
+
+Performance: 
+
+| Metrics/Treshold         	| 0    	| 0.8     	|
+|--------------------------	|------	|---------	|
+| Accuracy                 	| 0.30 	| 0.73    	|
+| Precision                	| 0.62 	| 0.80    	|
+| Recall                   	| 0.30 	| 0.73    	|
+| F1-Score                 	| 0.38 	| 0.76    	|
+| Number of photos removed 	| N.A  	| 423 / 507 |
+
+
+### Training using 15 photos
+
+Use only one photo per person: 
+
+![Histogram of confidence](report_figures/01.3_Family_benchmark_histogram_knownPhotos.png)
+
+Histograms of confidance shows higher scores when the face is predicted correctly (blue)
+
+Performance: 
+
+| Metrics/Treshold         	| 0    	| 0.8     	|
+|--------------------------	|------	|---------	|
+| Accuracy                 	| 0.31 	| 0.70    	|
+| Precision                	| 0.63 	| 0.75    	|
+| Recall                   	| 0.30 	| 0.70    	|
+| F1-Score                 	| 0.39 	| 0.72    	|
+| Number of photos removed 	| N.A  	| 417 / 507 |
+
+
+
+I still need to make some improvements (for example in new photos, since the results are weird, but this show that even increasing the number of photos used to train, the results are always the same)
