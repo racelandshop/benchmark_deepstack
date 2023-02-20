@@ -9,6 +9,8 @@ Make sure to edit the GLOBAL variables in the notebook if the deepstack command 
 
 # Benchmarks 
 
+Note: Since the faces are already croped, only the best prediction for each photo is taken into account
+
 ## Family-wide benchmark
 
 The most likely scenario is using the software in a family of 3-5 people 
