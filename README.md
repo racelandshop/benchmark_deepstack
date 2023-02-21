@@ -35,59 +35,90 @@ F1-Score = 2 * (precision * recall) / (precision + recall)
 
 Use only one photo per person: 
 
+Histogram of correct vs histogram of incorrect confidance
+
 ![Histogram of confidence](report_figures/01.1_Family_benchmark_histogram_knownPhotos.png)
 
-Histograms of confidance shows higher scores when the face is predicted correctly (blue)
+Metrics with increasing confidance 
 
-Performance: 
+<table>
+  <tr>
+    <td><img src="report_figures/01.1_Family_benchmark_scatterplot_F1vsConfidance.png" width=500 height=500></td>
+    <td><img src="report_figures/01.1_Family_benchmark_scatterplot_PredictionsignoredVSConfidance.png" width=500 height=500></td>
+  </tr>
+ </table>
 
-| Metrics/Treshold         	| 0    	| 0.8     	|
-|--------------------------	|------	|---------	|
-| Accuracy                 	| 0.33 	| 0.67    	|
-| Precision                	| 0.63 	| 0.74    	|
-| Recall                   	| 0.33 	| 0.67    	|
-| F1-Score                 	| 0.40 	| 0.69    	|
-| Number of photos removed 	| N.A  	| 415 / 508	|
+(Other metrics are avaiable in the report figure)
+
+![Histogram of confidence](report_figures/01.1_Family_benchmark_histogram_newPhotos.png)
+
+![Histogram of confidence](report_figures/01.1_Family_benchmark_scatterplot_PredictionsignoredVSConfidance_newimage.png)
 
 
 
 ### Training using Five photos
 
-Use only one photo per person: 
+Use five photo per person: 
+
+!Histogram of correct vs histogram of incorrect confidance
 
 ![Histogram of confidence](report_figures/01.2_Family_benchmark_histogram_knownPhotos.png)
 
-Histograms of confidance shows higher scores when the face is predicted correctly (blue)
+Metrics with increasing confidance 
 
-Performance: 
+<table>
+  <tr>
+    <td><img src="report_figures/01.2_Family_benchmark_scatterplot_F1vsConfidance.png" width=500 height=500></td>
+    <td><img src="report_figures/01.2_Family_benchmark_scatterplot_PredictionsignoredVSConfidance.png" width=500 height=500></td>
+  </tr>
+ </table>
 
-| Metrics/Treshold         	| 0    	| 0.8     	|
-|--------------------------	|------	|---------	|
-| Accuracy                 	| 0.30 	| 0.73    	|
-| Precision                	| 0.62 	| 0.80    	|
-| Recall                   	| 0.30 	| 0.73    	|
-| F1-Score                 	| 0.38 	| 0.76    	|
-| Number of photos removed 	| N.A  	| 423 / 507 |
+(Other metrics are avaiable in the report figure)
 
+![Histogram of confidence](report_figures/01.2_Family_benchmark_histogram_newPhotos.png)
+
+![Histogram of confidence](report_figures/01.2_Family_benchmark_scatterplot_newPredictionsignoredVSConfidance.png)
 
 ### Training using 15 photos
 
-Use only one photo per person: 
+Using 15 photo per person to train
+
+!Histogram of correct vs histogram of incorrect confidance
 
 ![Histogram of confidence](report_figures/01.3_Family_benchmark_histogram_knownPhotos.png)
 
-Histograms of confidance shows higher scores when the face is predicted correctly (blue)
+Metrics with increasing confidance 
 
-Performance: 
+<table>
+  <tr>
+    <td><img src="report_figures/01.3_Family_benchmark_scatterplot_F1vsConfidance.png" width=500 height=500></td>
+    <td><img src="report_figures/01.3_Family_benchmark_scatterplot_PredictionsignoredVSConfidance.png" width=500 height=500></td>
+  </tr>
+ </table>
 
-| Metrics/Treshold         	| 0    	| 0.8     	|
-|--------------------------	|------	|---------	|
-| Accuracy                 	| 0.31 	| 0.70    	|
-| Precision                	| 0.63 	| 0.75    	|
-| Recall                   	| 0.30 	| 0.70    	|
-| F1-Score                 	| 0.39 	| 0.72    	|
-| Number of photos removed 	| N.A  	| 417 / 507 |
+(Other metrics are avaiable in the report figure)
+
+![Histogram of confidence](report_figures/01.3_Family_benchmark_histogram_newPhotos.png)
+
+![Histogram of confidence](report_figures/01.3_Family_benchmark_scatterplot_new_PredictionsignoredVSConfidance.png)
 
 
+| Model                  	| One photo - min_confidance = 0 	| One photo - min_confidance = 0.6 	| One photo - min_confidance = 0.8 	| Five photo - min_confidance = 0 	| Five photo - min_confidance = 0.62 	| Five photo - min_confidance = 0.82 	| 15 photo - min_confidance = 0 	| 15 photo - min_confidance = 0.6 	| 15 photo - min_confidance = 0.8 	|
+|------------------------	|--------------------------------	|----------------------------------	|----------------------------------	|---------------------------------	|------------------------------------	|------------------------------------	|-------------------------------	|---------------------------------	|---------------------------------	|
+| Accuracy               	| 0.840                          	| 0.870                            	| 1                                	| 0.792                           	| 0.847                              	| 1                                  	| 0.804                         	| 0.857                           	| 1                               	|
+| F1-score               	| 0.830                          	| 0.863                            	| 1                                	| 0.777                           	| 0.840                              	| 1                                  	| 0.794                         	| 0.853                           	| 1                               	|
+| Precision              	| 0.877                          	| 0.870                            	| 1                                	| 0.799                           	| 0.847                              	| 1                                  	| 0.804                         	| 0.857                           	| 1                               	|
+| Recall                 	| 0.840                          	| 0.89                             	| 1                                	| 0.792                           	| 0.868                              	| 1                                  	| 0.836                         	| 0.882                           	| 1                               	|
+| prediction ignored (%) 	| 4.5                            	| 11.25                            	| 85.5                             	| 0                               	| 16.2                               	| 93.6                               	| 0                             	| 11.6                            	| 92.6                            	|
 
-I still need to make some improvements (for example in new photos, since the results are weird, but this show that even increasing the number of photos used to train, the results are always the same)
+
+## Discussion 
+
+- There are some limitations in this benchmark: Photos are pre-cut, meaning that we are not testing the capabilities of the algorithm to capture the face itself, only to identify. 
+- No care was taken in relation to different etnic groups
+- 
+
+## Conclusions 
+
+Training with more images has a marginal effect on the performance with high cutoffs (0.6-0.8)
+Applying a cuttoff is advised, if we are trying to prioritize not capturing people unknown 
